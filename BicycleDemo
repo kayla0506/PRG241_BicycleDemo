@@ -1,15 +1,18 @@
-class Bicycle {
+abstract class Bicycle {
 
-    int cadence = 0;
-    int speed = 0;
-    int gear = 1;
+    private int cadence = 0;
+    private int speed = 0;
+    private int gear = 1;
+    
+    private int bikeID; // Add identification number to bike
     
     // Create bicycleCount field, private variable, initialized to 0
     private static int bicycleCount = 0;
 
     //constructor
     public Bicycle(){
-	 bicycleCount++;  //increments bicycleCount everytime new object is constructed
+	 bikeID = ++bicycleCount;  //increments bicycleCount everytime new object is constructed
+	 			   //and assigns bicycleCount number to object as the bikeID
     }
 
     void changeCadence(int newValue) {
@@ -38,38 +41,39 @@ class Bicycle {
 // Create subclass MountainBike
 class MountainBike extends Bicycle {
 
-    //Add code
+    private String tireTread;
+    private int MountainRating;
 
 }
 
 //Create subclass RoadBike
 class RoadBike extends Bicycle {
 
-    //Add code
+    private int maximumMPH;
 
 }
 
 class BicycleDemo {
     public static void main(String[] args) {
 
-        // Create two different 
-        // Bicycle objects
-        Bicycle bike1 = new Bicycle();
-        Bicycle bike2 = new Bicycle();
-
-        // Invoke methods on 
-        // those objects
-        bike1.changeCadence(50);
-        bike1.speedUp(10);
-        bike1.changeGear(2);
-        bike1.printStates();
-
-        bike2.changeCadence(50);
-        bike2.speedUp(10);
-        bike2.changeGear(2);
-        bike2.changeCadence(40);
-        bike2.speedUp(10);
-        bike2.changeGear(3);
-        bike2.printStates();
+        // Create two instances each of MountainBike and RoadBike 
+	// Display value of bicycleCount after each instance created
+        MountainBike myMtnBike1 = new MountainBike();
+        
+	//print line myMtnBike1.bikeID
+	
+	MountainBike myMtnBike2 = new MountainBike();
+	
+	//print line myMtnBike2.bikeID
+	
+	RoadBike myRoadBike1 = new RoadBike();
+	
+	//print line myRoadBike1.bikeID
+	
+	RoadBike myRoadBike2 = new RoadBike();
+        
+	//print line myRoadBike2.bikeID
+	
+	
     }
 }
