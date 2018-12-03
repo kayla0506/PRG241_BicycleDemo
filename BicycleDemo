@@ -61,19 +61,24 @@ class BicycleDemo {
         MountainBike myMtnBike1 = new MountainBike();
         
 	//print line myMtnBike1.bikeID
+	System.out.println("The id number for myMtnBike1 is: " + myMtnBike1.bikeID);
 	
 	MountainBike myMtnBike2 = new MountainBike();
 	
 	//print line myMtnBike2.bikeID
+	System.out.println("The id number for myMtnBike2 is: " + myMtnBike2.bikeID);
 	
 	RoadBike myRoadBike1 = new RoadBike();
 	
 	//print line myRoadBike1.bikeID
+	System.out.println("The id number for myRoadBike1 is: " + myRoadBike1.bikeID);
 	
 	RoadBike myRoadBike2 = new RoadBike();
         
 	//print line myRoadBike2.bikeID
+	System.out.println("The id number for myRoadBike2 is: " + myRoadBike2.bikeID);
 	
-	
+	//print the total number of bikes that have been created
+	System.out.println("The total number of bikes is: " + Bicycle.bicycleCount);
     }
 }
